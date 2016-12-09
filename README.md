@@ -1,2 +1,2 @@
-# templates
+# Templates
 Templates for creating different files (latex and gnuplot)
