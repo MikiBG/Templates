@@ -1,0 +1,31 @@
+\documentclass{article}
+\thispagestyle{empty}
+\usepackage{geometry}
+\geometry{
+paperwidth=8.6cm,
+paperheight=11.4cm,
+margin=0.0cm
+}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{positioning,fit,calc}
+
+\begin{document}
+ 
+\begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=north west,shift={(-0.05cm,0cm)}] at (current page.north west) {a)};
+      \node[anchor=north west,shift={(1.5cm,-0.3cm)}](image_a) at (current page.north west) {\includegraphics[width=4.8cm]{Energy_bandsLieb.pdf}};
+      \begin{scope}[shift=(image_a.south west),x={(image_a.south east)},y={(image_a.north west)}]
+         %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+         \draw[<->,blue,line width=0.2mm] (.97,.485) -- (.97,.6);
+         \node[anchor=south west,blue] (label) at (0.97,0.44) {\large$\Delta\mu$}; 
+       \end{scope}
+      \node[anchor=north west,shift={(-0.1cm,-3.5cm)}] (image_b) at (current page.north west) {\includegraphics{p_a_r.eps}};
+      \node[anchor=north west,shift={(-0.05cm,-7.3cm)}] at (current page.north west) {c)};
+      \node[anchor=north west,shift={(-0.1cm,-7.3cm)}] (image_c) at (current page.north west) {\includegraphics{p_a_flux.eps}};
+\end{tikzpicture}
+
+\end{document}
+
