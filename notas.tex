@@ -35,6 +35,11 @@
 \titleformat{\subsection}{\large\bf \fontfamily{lmss}\selectfont}{\thesubsection.}{0.5em}{}
 \renewcommand\refname{\bf \fontfamily{lmss}\selectfont Bibliography}
 
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
+\DeclarePairedDelimiter\mean{\langle}{\rangle}
+\newcommand*{\tr}[1]{\mathrm{tr}\left(#1\right)}
 
 \begin{document}
 \title{<++>}
