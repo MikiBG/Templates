@@ -8,4 +8,5 @@
 
 ## Latex
 * notas.tex: latex template to write simple notes
-* prl.tex: latex template to write a scientific article in aps format
+* article.tex: latex template to write a scientific article in the APS format
+* slides.tex: latex template to make a slide show
