@@ -1,14 +1,16 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, margin=3cm]{geometry}
 \usepackage{titlesec}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage[fleqn]{mathtools}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{lmodern}
+\usepackage{braket}
   
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
 
 %Formating title, sections' titles and so on...
 \makeatletter
@@ -35,11 +37,8 @@
 \titleformat{\subsection}{\large\bf \fontfamily{lmss}\selectfont}{\thesubsection.}{0.5em}{}
 \renewcommand\refname{\bf \fontfamily{lmss}\selectfont Bibliography}
 
-\DeclarePairedDelimiter\bra{\langle}{\rvert}
-\DeclarePairedDelimiter\ket{\lvert}{\rangle}
-\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1 \delimsize\vert #2}
 \DeclarePairedDelimiter\mean{\langle}{\rangle}
-\newcommand*{\tr}[1]{\mathrm{tr}\left(#1\right)}
+\newcommand*{\tr}{\mathrm{tr}}
 
 \begin{document}
 \title{<++>}
@@ -51,13 +50,12 @@
 \subsection{<++>}
 
 
-\clearpage
 \begin{thebibliography}{4}
  
- \bibitem{ctqw}
- O. M\"ulken and A. Blumen,
- \textit{Continuous-time quantum walks: models for coherent transport on complex networks.}
- Phys. Rep. vol 502, issues 2-3, pages 37-87 (2011)
+ \bibitem{BreuerPetruccione}
+   H.~P. Breuer and F. Petruccione,
+ \textit{The theory of open quantum systems}
+ Oxford University Press (2002)
  
 \end{thebibliography} 
 
