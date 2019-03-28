@@ -1,47 +1,32 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[a4paper, 11pt]{article}
+\usepackage[a4paper, 
+            left=3cm, 
+            right=3cm, 
+            top=2.715cm, 
+            bottom=2.715cm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper, left=3cm, right=3cm, top=2.715cm, bottom=2.715cm]{geometry}
-\usepackage{titlesec}
 \usepackage{color}
 \usepackage{graphicx}
-\usepackage[fleqn, tbtags]{mathtools} % already loads amsmath 
-% \usepackage{amsmath, amsthm, amssymb}
 \usepackage{lmodern}
-\usepackage{braket}
-\usepackage{tocloft}        % for good-looking table of contents
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel} % for correct hyphenation
 \usepackage{microtype}      % refinements towards typographical perfection
+\usepackage{titlesec}       % formating titles, sections' titles etc.
+\usepackage{titling}
+\renewcommand*{\maketitle}{
+  {\begin{center}\LARGE\bf\sffamily \thetitle \end{center}}
+  {\begin{center}\large \theauthor. \today \end{center}\bigskip}
+}
+\titleformat{\section}{\Large\bf\sffamily}{\thesection.}{0.5em}{} 
+\titleformat{\subsection}{\large\bf\sffamily}{\thesubsection.}{0.5em}{}
+\titleformat{\subsection}{\bf\sffamily}{\thesubsubsection.}{0.5em}{}
+\usepackage[fleqn, tbtags]{mathtools} % already loads amsmath 
+\usepackage{tocloft}        % for good-looking table of contents
   
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{10pt}
 
-%Formating title, sections' titles and so on...
-\makeatletter
-\def\@maketitle{%
-  \newpage
-  \null
-  \begin{center}%
-  \let \footnote \thanks
-    {\LARGE\bf \fontfamily{lmss}\selectfont \@title \par}%
-    \vskip 1.5em%
-    {\large
-      \lineskip .5em%
-      \begin{tabular}[t]{c}%
-        \@author
-      \end{tabular}\par}%
-    \vskip 1em%
-    %{\large \@date}%
-  \end{center}%
-  \par
-  \vskip 1.5em}
-\makeatother
- 
-\titleformat{\section}{\Large\bf \fontfamily{lmss}\selectfont}{\thesection.}{0.5em}{}
-\titleformat{\subsection}{\large\bf \fontfamily{lmss}\selectfont}{\thesubsection.}{0.5em}{}
-\renewcommand\refname{\bf \fontfamily{lmss}\selectfont Bibliography}
-
-\DeclarePairedDelimiter\mean{\langle}{\rangle}
-\newcommand*{\tr}{\mathrm{tr}}
+% file-specific package and definitions:
 
 \begin{document}
 \title{<++>}
@@ -53,13 +38,13 @@
 \subsection{<++>}
 
 
-\begin{thebibliography}{4}
+% \begin{thebibliography}{4}
  
- \bibitem{BreuerPetruccione}
-   H.~P. Breuer and F. Petruccione,
- \textit{The theory of open quantum systems}
- Oxford University Press (2002)
+%  \bibitem{BreuerPetruccione}
+%    H.~P. Breuer and F. Petruccione,
+%  \textit{The theory of open quantum systems}
+%  Oxford University Press (2002)
  
-\end{thebibliography} 
+% \end{thebibliography} 
 
 \end{document}
