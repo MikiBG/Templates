@@ -5,7 +5,7 @@
             top=2.715cm, 
             bottom=2.715cm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
@@ -22,9 +22,16 @@
 \titleformat{\subsection}{\bf\sffamily}{\thesubsubsection.}{0.5em}{}
 \usepackage[fleqn, tbtags]{mathtools} % already loads amsmath 
 \usepackage{tocloft}        % for good-looking table of contents
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!80!black},
+    citecolor={blue!80!black},
+    urlcolor={blue!80!black}
+}
   
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{10pt}
+\setlength{\parskip}{1em}
 
 % file-specific package and definitions:
 
