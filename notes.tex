@@ -21,8 +21,8 @@
 \titleformat{\subsection}{\large\bf\sffamily}{\thesubsection.}{0.5em}{}
 \titleformat{\subsection}{\bf\sffamily}{\thesubsubsection.}{0.5em}{}
 \usepackage[fleqn, tbtags]{mathtools} % already loads amsmath 
-\usepackage{tocloft}        % for good-looking table of contents
-\usepackage{hyperref}
+\usepackage{tocloft}   % for good-looking table of contents
+\usepackage{hyperref}  % for hyperlinks. Should be the last package included
 \hypersetup{
     colorlinks,
     linkcolor={blue!80!black},
@@ -33,7 +33,11 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
 
-% file-specific package and definitions:
+% Userdefinitions definitions:
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\ud}{\, \mathrm{d}}
+
 
 \begin{document}
 \title{<++>}
