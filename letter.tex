@@ -1,0 +1,39 @@
+\documentclass[11pt]{letter}
+\usepackage{geometry}
+\geometry{
+  paper=a4paper,
+  top=3cm,
+  bottom=1.5cm,
+  left=4.5cm,
+  right=4.5cm,
+  %showframe, % uncomment to show how the type block is set on the page
+}
+\usepackage{stix}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{microtype}
+
+% YOUR NAME & ADDRESS
+\signature{The authors} % signature at the bottom
+\address{Materials Science Institute of Madrid (CSIC)\\Calle Sor Juana Inés de la Cruz 3\\ES-28049 Madrid, Spain}
+
+\begin{document}
+% address of the recipient
+\begin{letter}{Pepe \\ pepe@gmail.com \\ Calle de pepe \\ ES-28080 Madrid, Spain}
+
+\opening{Dear Editor}
+
+Cuerpo de la carta
+
+\vspace{2\parskip} % extra whitespace for aesthetics
+\closing{Sincerely,}
+\vspace{2\parskip} % extra whitespace for aesthetics
+
+\ps{P.S. You can find additional information attached to this letter.}
+
+\encl{Copyright permission form}
+
+\end{leter}
+\end{document}
+

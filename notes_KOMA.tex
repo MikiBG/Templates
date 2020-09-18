@@ -1,9 +1,4 @@
-\documentclass[a4paper, 11pt]{article}
-\usepackage[a4paper, 
-            left=3cm, 
-            right=3cm, 
-            top=2.715cm, 
-            bottom=2.715cm]{geometry}
+\documentclass[a4paper,11pt]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 \usepackage{graphicx}
@@ -11,17 +6,23 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel} 
 \usepackage{microtype}     
-\usepackage{titlesec}     
-\usepackage{titling}
-\renewcommand*{\maketitle}{
-  {\begin{center}\LARGE\bf\sffamily \thetitle \end{center}}
-  {\begin{center}\large \theauthor. \today \end{center}\bigskip}
-}
-\titleformat{\section}{\Large\bf\sffamily}{\thesection.}{0.5em}{} 
-\titleformat{\subsection}{\large\bf\sffamily}{\thesubsection.}{0.5em}{}
-\titleformat{\subsection}{\bf\sffamily}{\thesubsubsection.}{0.5em}{}
+
 \usepackage[fleqn, tbtags]{mathtools} % already loads amsmath 
-\usepackage{tocloft}   % for good-looking table of contents
+
+\usepackage[
+  backend=biber,
+  style=numeric-comp,
+  sorting=none,
+  giveninits=true,
+  maxbibnames=99,
+  doi=false,
+  url=false,
+  isbn=false,
+  eprint=false
+]{biblatex}
+% \renewcommand*{\bibfont}{\small} 
+\addbibresource{Scattering.bib}
+
 \usepackage{hyperref}  % for hyperlinks. Should be the last package included
 \hypersetup{
     colorlinks,
@@ -29,10 +30,8 @@
     citecolor={blue!80!black},
     urlcolor={blue!80!black}
 }
-  
 
-
-% Userdefinitions definitions:
+% User definitions:
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
@@ -40,12 +39,16 @@
 \DeclarePairedDelimiter\ket{\lvert}{\rangle}
 \DeclarePairedDelimiter\bra{\langle}{\rvert}
 \DeclarePairedDelimiter\mean{\langle}{\rangle}
+\DeclareMathOperator{\pv}{P}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\sign}{sign}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
-\DeclareMathOperator{\PV}{P.V.}
-\newcommand{\diff}[1]{d\mkern-1.5mu{#1}\,}
+% \newcommand{\diff}[1]{d\mkern-1.5mu{#1}\,}
+\newcommand{\diff}[1]{d{#1}\,}
+\newcommand{\inn}{\mathrm{in}}
+\newcommand{\out}{\mathrm{out}}
+
 
 
 \begin{document}
@@ -56,11 +59,14 @@
 
 \maketitle
 
-%\tableofcontents
+\begin{abstract}
+<++>
+\end{abstract}
+
+% \tableofcontents
 
 \section{<++>}
-\subsection{<++>}
 
-
+\printbibliography[heading=bibintoc,title={Bibliography}]
 
 \end{document}
